@@ -2,6 +2,25 @@ import io, json
 import os 
 import glob
 
+
+def sortObject(objArray):
+    keys = []
+    sortedList = []
+
+    for a in objArray:
+        j = a['order']
+        keys.append(j)
+
+    keys.sort()        
+
+    for k in keys:
+        for a in objArray:
+            if a['order'] == k:
+                sortedList.append(a)
+
+    return sortedList        
+
+
 def getArray():
     result = {'directories': []}
     dirs = []
@@ -11,12 +30,16 @@ def getArray():
 
     files = []
     
-    afile = {'name': 'intro.md', 'order': 1000}
+    afile = {'name': 'intro.md', 'order': 1004}
     files.append(afile)
 
-    afile = {'name': 'skills.md', 'order': 1002}
+    afile = {'name': 'skills.md', 'order': 1003}
     files.append(afile)
 
+    afile = {'name': 'skills.md', 'order': 1000}
+    files.append(afile)
+
+    files = sortObject(files)
 
     directory = {'name': 'avr', 'files': files}
     dirs.append(directory)
