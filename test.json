@@ -1,0 +1,24 @@
+{
+    "directories": [
+    {
+		"name": "root",
+		"files": []
+    }, 
+    {
+		"name": "avr",
+		"files": [
+            {
+			    "name": "db.md",
+			    "order": 1000
+            },
+            {
+			    "name": "skills.md",
+			    "order": 1002
+            },
+            {
+			    "name": "pillars.md",
+			    "order": 1002
+            }
+        ]
+	}]
+}
