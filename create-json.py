@@ -2,6 +2,8 @@ import io, json
 import os 
 import glob
 
+result = {'directories': []}
+
 
 def sortObject(objArray):
     keys = []
